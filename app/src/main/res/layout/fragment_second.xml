@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondFragment">
+
+    <TextView
+        android:id="@+id/fragment_second_pais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.08"
+        android:textColor="#00ff22"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:text="@sample/covidall.json/covidall/CountryText" />
+
+    <TextView
+        android:id="@+id/fragment_second_casos_ativos_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        tools:text="Casos ativos:"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_second_pais"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_second_pais" />
+    <TextView
+        android:id="@+id/fragment_second_casos_ativos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@sample/covidall.json/covidall/ActiveCasesText"
+        app:layout_constraintStart_toEndOf="@+id/fragment_second_pais"
+        app:layout_constraintTop_toTopOf="@+id/fragment_second_casos_ativos_textView"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/fragment_second_ultima_atualizacao_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        tools:text="Última atualização:"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/fragment_second_casos_ativos_textView"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_second_casos_ativos_textView" />
+    <TextView
+        android:id="@+id/fragment_second_ultima_atualizacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@sample/covidall.json/covidall/LastUpdate"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_second_casos_ativos"
+        app:layout_constraintTop_toTopOf="@+id/fragment_second_ultima_atualizacao_textView"/>
+
+    <TextView
+        android:id="@+id/fragment_second_novos_casos_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        tools:text="Novos casos:"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/fragment_second_ultima_atualizacao_textView"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_second_ultima_atualizacao_textView" />
+    <TextView
+        android:id="@+id/fragment_second_novos_casos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@sample/covidall.json/covidall/NewCasesText"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_second_ultima_atualizacao"
+        app:layout_constraintTop_toTopOf="@+id/fragment_second_novos_casos_textView"/>
+
+    <TextView
+        android:id="@+id/fragment_second_novas_mortes_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        tools:text="Novas mortes:"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/fragment_second_novos_casos_textView"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_second_novos_casos_textView" />
+    <TextView
+        android:id="@+id/fragment_second_novas_mortes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@sample/covidall.json/covidall/NewDeathsText"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_second_novos_casos"
+        app:layout_constraintTop_toTopOf="@+id/fragment_second_novas_mortes_textView"/>
+
+    <TextView
+        android:id="@+id/fragment_second_casos_totais_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        tools:text="Casos totais:"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/fragment_second_novas_mortes_textView"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_second_novas_mortes_textView" />
+    <TextView
+        android:id="@+id/fragment_second_casos_totais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@sample/covidall.json/covidall/TotalCasesText"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_second_novas_mortes"
+        app:layout_constraintTop_toTopOf="@+id/fragment_second_casos_totais_textView"/>
+
+    <TextView
+        android:id="@+id/fragment_second_mortes_totais_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        tools:text="Mortes totais:"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/fragment_second_casos_totais_textView"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_second_casos_totais_textView" />
+    <TextView
+        android:id="@+id/fragment_second_mortes_totais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@sample/covidall.json/covidall/TotalCasesText"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_second_casos_totais"
+        app:layout_constraintTop_toTopOf="@+id/fragment_second_mortes_totais_textView"/>
+
+    <TextView
+        android:id="@+id/fragment_second_total_recuperados_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        tools:text="Total de recuperados:"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/fragment_second_mortes_totais_textView"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_second_mortes_totais_textView" />
+    <TextView
+        android:id="@+id/fragment_second_total_recuperados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@sample/covidall.json/covidall/TotalRecoveredText"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_second_mortes_totais"
+        app:layout_constraintTop_toTopOf="@+id/fragment_second_total_recuperados_textView"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
