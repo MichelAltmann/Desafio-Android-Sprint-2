@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -29,11 +30,57 @@ public class SecondFragment extends Fragment {
         if (bundle != null){
             CountryCovidData data = (CountryCovidData) bundle.getSerializable("countryName");
             binding.fragmentSecondPais.setText(data.getCountryText());
-        }else{
-            binding.fragmentSecondPais.setText("PQ CARALHO");
+
+            if (!data.getActiveCasesText().equals("")){
+                binding.fragmentSecondCasosAtivos.setText(data.getActiveCasesText());
+            } else {
+                binding.fragmentSecondCasosAtivosTextView.setVisibility(TextView.GONE);
+                binding.fragmentSecondCasosAtivos.setVisibility(TextView.GONE);
+            }
+
+            if (!data.getActiveCasesText().equals("")){
+                binding.fragmentSecondUltimaAtualizacao.setText(data.getLastUpdateText());
+            } else {
+                binding.fragmentSecondUltimaAtualizacaoTextView.setVisibility(TextView.GONE);
+                binding.fragmentSecondUltimaAtualizacao.setVisibility(TextView.GONE);
+            }
+
+            if (!data.getActiveCasesText().equals("")){
+                binding.fragmentSecondNovosCasos.setText(data.getNewCasesText());
+            } else {
+                binding.fragmentSecondNovosCasos.setVisibility(TextView.GONE);
+                binding.fragmentSecondNovosCasosTextView.setVisibility(TextView.GONE);
+            }
+
+            if (!data.getActiveCasesText().equals("")){
+                binding.fragmentSecondNovasMortes.setText(data.getNewDeathsText());
+            } else {
+                binding.fragmentSecondNovasMortes.setVisibility(TextView.GONE);
+                binding.fragmentSecondNovasMortesTextView.setVisibility(TextView.GONE);
+            }
+
+            if (!data.getActiveCasesText().equals("")){
+                binding.fragmentSecondCasosTotais.setText(data.getTotalCasesText());
+            } else {
+                binding.fragmentSecondCasosTotais.setVisibility(TextView.GONE);
+                binding.fragmentSecondCasosTotaisTextView.setVisibility(TextView.GONE);
+            }
+
+            if (!data.getActiveCasesText().equals("")){
+                binding.fragmentSecondMortesTotais.setText(data.getTotalDeathsText());
+            } else {
+                binding.fragmentSecondMortesTotais.setVisibility(TextView.GONE);
+                binding.fragmentSecondMortesTotaisTextView.setVisibility(TextView.GONE);
+            }
+
+            if (!data.getActiveCasesText().equals("")){
+                binding.fragmentSecondTotalRecuperados.setText(data.getTotalRecoveredText());
+            } else {
+                binding.fragmentSecondTotalRecuperados.setVisibility(TextView.GONE);
+                binding.fragmentSecondTotalRecuperadosTextView.setVisibility(TextView.GONE);
+            }
+
         }
-
-
     }
 
     @Override

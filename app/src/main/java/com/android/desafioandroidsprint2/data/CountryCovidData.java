@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class CountryCovidData implements Serializable {
     String ActiveCasesText;
+    String LastUpdateText;
     String CountryText;
     String NewCasesText;
     String NewDeathsText;
@@ -12,6 +13,7 @@ public class CountryCovidData implements Serializable {
     String TotalRecoveredText;
 
     public CountryCovidData(String ActiveCasesText,
+                            String LastUpdateText,
                             String CountryText,
                             String NewCasesText,
                             String NewDeathsText,
@@ -19,6 +21,7 @@ public class CountryCovidData implements Serializable {
                             String TotalDeathsText,
                             String TotalRecoveredText) {
         this.ActiveCasesText = ActiveCasesText;
+        this.LastUpdateText = LastUpdateText;
         this.CountryText = CountryText;
         this.NewCasesText = NewCasesText;
         this.NewDeathsText = NewDeathsText;
@@ -29,6 +32,10 @@ public class CountryCovidData implements Serializable {
 
     public String getActiveCasesText() {
         return ActiveCasesText;
+    }
+
+    public String getLastUpdateText() {
+        return LastUpdateText;
     }
 
     public String getCountryText() {
@@ -54,4 +61,5 @@ public class CountryCovidData implements Serializable {
     public String getTotalRecoveredText() {
         return TotalRecoveredText;
     }
+
 }
