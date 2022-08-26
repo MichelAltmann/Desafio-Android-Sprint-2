@@ -1,30 +1,16 @@
 package com.android.desafioandroidsprint2;
 
-import android.content.Context;
 import android.os.Bundle;
-
-import com.android.desafioandroidsprint2.model.PaisCovidData;
-import com.google.android.material.snackbar.Snackbar;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.util.JsonReader;
-import android.util.Log;
-import android.view.View;
-
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.desafioandroidsprint2.databinding.ActivityMainBinding;
-
-import android.view.Menu;
-import android.view.MenuItem;
-
-import java.lang.reflect.Type;
-import java.util.List;
 
 public class ListaCovidActivity extends AppCompatActivity {
 

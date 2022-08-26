@@ -1,5 +1,4 @@
-{
-  "covidall": [
+[
   {
     "ActiveCasesText": "+613,399",
     "CountryText": "World",
@@ -2174,5 +2173,4 @@
     "TotalDeathsText": "",
     "TotalRecoveredText": "2"
   }
-]
-}
+  ]
