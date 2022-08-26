@@ -54,11 +54,11 @@ public class FirstFragment extends Fragment {
             public void onItemClick(CountryCovidData data, int posicao) {
                 Fragment fragment = new SecondFragment();
                 Bundle bundle = new Bundle();
-                CountryCovidData covidList = covidListData.get(posicao);
-                Log.i(TAG, covidList.toString());
-                bundle.putSerializable("countryName", data);
+                CountryCovidData countryCovidData = covidListData.get(posicao);
+                Log.i(TAG, countryCovidData.toString());
+                bundle.putSerializable("countryName", countryCovidData);
                 fragment.setArguments(bundle);
-                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_SecondFragment); 
+                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_SecondFragment,bundle);
             }
         });
     }
