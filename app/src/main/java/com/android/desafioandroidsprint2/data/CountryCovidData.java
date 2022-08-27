@@ -31,34 +31,58 @@ public class CountryCovidData implements Serializable {
     }
 
     public String getActiveCasesText() {
+        if (ActiveCasesText == null){
+            ActiveCasesText = "";
+        }
         return ActiveCasesText;
     }
 
-    public String getLastUpdateText() {
+    public String getLastUpdate() {
+        if (LastUpdate == null){
+            LastUpdate = "";
+        }
         return LastUpdate;
     }
 
     public String getCountryText() {
+        if (CountryText == null){
+            CountryText = "";
+        }
         return CountryText;
     }
 
     public String getNewCasesText() {
+        if (NewCasesText == null){
+            NewCasesText = "";
+        }
         return NewCasesText;
     }
 
     public String getNewDeathsText() {
+        if (NewDeathsText == null){
+            NewDeathsText = "";
+        }
         return NewDeathsText;
     }
 
     public String getTotalCasesText() {
+        if (TotalCasesText == null){
+            TotalCasesText = "";
+        }
         return TotalCasesText;
     }
 
     public String getTotalDeathsText() {
+        if (TotalDeathsText == null){
+            TotalDeathsText = "";
+        }
         return TotalDeathsText;
     }
 
     public String getTotalRecoveredText() {
+        if (TotalRecoveredText == null){
+            TotalRecoveredText = "";
+        }
         return TotalRecoveredText;
     }
 

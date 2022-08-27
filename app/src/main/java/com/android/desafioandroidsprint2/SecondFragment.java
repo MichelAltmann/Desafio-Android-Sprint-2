@@ -27,7 +27,6 @@ public class SecondFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Bundle bundle = getArguments();
-        if (bundle != null){
             CountryCovidData data = (CountryCovidData) bundle.getSerializable("countryName");
             binding.fragmentSecondPais.setText(data.getCountryText());
 
@@ -38,42 +37,42 @@ public class SecondFragment extends Fragment {
                 binding.fragmentSecondCasosAtivos.setVisibility(TextView.GONE);
             }
 
-            if (!data.getActiveCasesText().equals("")){
-                binding.fragmentSecondUltimaAtualizacao.setText(data.getLastUpdateText());
+            if (!data.getLastUpdate().equals("")){
+                binding.fragmentSecondUltimaAtualizacao.setText(data.getLastUpdate());
             } else {
                 binding.fragmentSecondUltimaAtualizacaoTextView.setVisibility(TextView.GONE);
                 binding.fragmentSecondUltimaAtualizacao.setVisibility(TextView.GONE);
             }
 
-            if (!data.getActiveCasesText().equals("")){
+            if (!data.getNewCasesText().equals("")){
                 binding.fragmentSecondNovosCasos.setText(data.getNewCasesText());
             } else {
                 binding.fragmentSecondNovosCasos.setVisibility(TextView.GONE);
                 binding.fragmentSecondNovosCasosTextView.setVisibility(TextView.GONE);
             }
 
-            if (!data.getActiveCasesText().equals("")){
+            if (!data.getNewDeathsText().equals("")){
                 binding.fragmentSecondNovasMortes.setText(data.getNewDeathsText());
             } else {
                 binding.fragmentSecondNovasMortes.setVisibility(TextView.GONE);
                 binding.fragmentSecondNovasMortesTextView.setVisibility(TextView.GONE);
             }
 
-            if (!data.getActiveCasesText().equals("")){
+            if (!data.getTotalCasesText().equals("")){
                 binding.fragmentSecondCasosTotais.setText(data.getTotalCasesText());
             } else {
                 binding.fragmentSecondCasosTotais.setVisibility(TextView.GONE);
                 binding.fragmentSecondCasosTotaisTextView.setVisibility(TextView.GONE);
             }
 
-            if (!data.getActiveCasesText().equals("")){
+            if (!data.getTotalDeathsText().equals("")){
                 binding.fragmentSecondMortesTotais.setText(data.getTotalDeathsText());
             } else {
                 binding.fragmentSecondMortesTotais.setVisibility(TextView.GONE);
                 binding.fragmentSecondMortesTotaisTextView.setVisibility(TextView.GONE);
             }
 
-            if (!data.getActiveCasesText().equals("")){
+            if (!data.getTotalRecoveredText().equals("")){
                 binding.fragmentSecondTotalRecuperados.setText(data.getTotalRecoveredText());
             } else {
                 binding.fragmentSecondTotalRecuperados.setVisibility(TextView.GONE);
@@ -81,7 +80,6 @@ public class SecondFragment extends Fragment {
             }
 
         }
-    }
 
     @Override
     public void onDestroyView() {
