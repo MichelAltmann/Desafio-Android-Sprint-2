@@ -26,3 +26,8 @@ Git init
 6.	Com o Git Você pode propor mudanças (adicioná-las ao Index) usando um comando. Qual é esse comando?
 
 Git add
+
+7.	O que é a Branch master e para que serve?
+
+A Branch master é a Branch Main antes de ser renomeada, esta é como se fosse o Pai das outras branchs, sendo a parte principal do projeto.
+
