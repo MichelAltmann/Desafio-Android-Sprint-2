@@ -40,3 +40,7 @@ Git merge nomedaoutrabranch
 9.	Qual a diferença entre git e github?
 
 A diferença é que git é o sistema de controle de versões que te deixa atualizar e manter controle delas, e o github é o host na nuvem onde você pode acessar e gerir essas versões.
+
+10.	Conta pra gente como foi sua experiência na Sprint#02 do programa de bolsa @Android e quais suas expectativas a partir de agora:
+
+A minha experiência na Sprint#02 do programa foi muito boa, nela eu percebi a grande diferença entre assistir aos conteúdos, e fazer um projeto por si, foi nessa Sprint que eu me dei conta em que a área é realmente uma na qual não me vejo enjoar, pois mesmo tendo programado por quase 10 horas direto em um dia, não teve nenhum momento no qual pensei em desistir disso, mesmo passando horas em um bug que era mais simples do que eu esperava. Minhas expectativas a partir de agora estão bem altas, espero conseguir seguir aprendendo mais sobre Android, e estou empolgado para começar os estudos em Kotlin.
