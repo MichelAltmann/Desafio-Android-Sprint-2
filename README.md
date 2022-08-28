@@ -31,3 +31,7 @@ Git add
 
 A Branch master é a Branch Main antes de ser renomeada, esta é como se fosse o Pai das outras branchs, sendo a parte principal do projeto.
 
+8.	Quais são os comandos usados para atualizar um repositório local e fazer merge de um outro branch ao seu branch ativo?
+
+Git checkout nomedabranch
+Git merge nomedaoutrabranch
