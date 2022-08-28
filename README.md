@@ -22,3 +22,7 @@ O Git é um sistema de controle de versões criado por Linus Torvalds e Junio Ha
 5.	Qual o comando para criação de um novo repositório no Git?
 
 Git init
+
+6.	Com o Git Você pode propor mudanças (adicioná-las ao Index) usando um comando. Qual é esse comando?
+
+Git add
