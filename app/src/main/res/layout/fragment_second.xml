@@ -1,151 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondFragment">
+    android:background="#c3c3c3">
 
-    <TextView
-        android:id="@+id/fragment_second_pais"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.08"
-        android:textColor="#00ff22"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        tools:text="CountryText" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SecondFragment">
+        <TextView
+            android:id="@+id/fragment_second_pais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#505050"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.08"
+            tools:text="CountryText" />
 
-    <TextView
-        android:id="@+id/fragment_second_casos_ativos_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_margin="16dp"
-        android:text="Casos ativos:"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/fragment_second_pais"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_second_pais" />
-    <TextView
-        android:id="@+id/fragment_second_casos_ativos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="ActiveCasesText"
-        app:layout_constraintStart_toEndOf="@+id/fragment_second_pais"
-        app:layout_constraintTop_toTopOf="@+id/fragment_second_casos_ativos_textView"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/fragment_second_casos_ativos_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:text="Casos ativos:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_second_pais" />
 
-    <TextView
-        android:id="@+id/fragment_second_ultima_atualizacao_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:text="Última atualização:"
-        android:layout_marginTop="8dp"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@id/fragment_second_casos_ativos_textView"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_second_casos_ativos_textView" />
-    <TextView
-        android:id="@+id/fragment_second_ultima_atualizacao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="LastUpdate"
-        app:layout_constraintEnd_toEndOf="@+id/fragment_second_casos_ativos"
-        app:layout_constraintTop_toTopOf="@+id/fragment_second_ultima_atualizacao_textView"/>
+        <TextView
+            android:id="@+id/fragment_second_casos_ativos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/fragment_second_casos_ativos_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="ActiveCasesText" />
 
-    <TextView
-        android:id="@+id/fragment_second_novos_casos_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:text="Novos casos:"
-        android:layout_marginTop="8dp"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@id/fragment_second_ultima_atualizacao_textView"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_second_ultima_atualizacao_textView" />
-    <TextView
-        android:id="@+id/fragment_second_novos_casos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="NewCasesText"
-        app:layout_constraintEnd_toEndOf="@+id/fragment_second_ultima_atualizacao"
-        app:layout_constraintTop_toTopOf="@+id/fragment_second_novos_casos_textView"/>
+        <TextView
+            android:id="@+id/fragment_second_ultima_atualizacao_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:text="Última atualização:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_second_casos_ativos_textView" />
 
-    <TextView
-        android:id="@+id/fragment_second_novas_mortes_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:text="Novas mortes:"
-        android:layout_marginTop="8dp"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@id/fragment_second_novos_casos_textView"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_second_novos_casos_textView" />
-    <TextView
-        android:id="@+id/fragment_second_novas_mortes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="NewDeathsText"
-        app:layout_constraintEnd_toEndOf="@+id/fragment_second_novos_casos"
-        app:layout_constraintTop_toTopOf="@+id/fragment_second_novas_mortes_textView"/>
+        <TextView
+            android:id="@+id/fragment_second_ultima_atualizacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/fragment_second_ultima_atualizacao_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="LastUpdate" />
 
-    <TextView
-        android:id="@+id/fragment_second_casos_totais_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:text="Casos totais:"
-        android:layout_marginTop="8dp"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@id/fragment_second_novas_mortes_textView"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_second_novas_mortes_textView" />
-    <TextView
-        android:id="@+id/fragment_second_casos_totais"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="TotalCasesText"
-        app:layout_constraintEnd_toEndOf="@+id/fragment_second_novas_mortes"
-        app:layout_constraintTop_toTopOf="@+id/fragment_second_casos_totais_textView"/>
+        <TextView
+            android:id="@+id/fragment_second_novos_casos_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:text="Novos casos:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_second_ultima_atualizacao_textView" />
 
-    <TextView
-        android:id="@+id/fragment_second_mortes_totais_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:text="Mortes totais:"
-        android:visibility="visible"
-        android:layout_marginTop="8dp"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@id/fragment_second_casos_totais_textView"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_second_casos_totais_textView" />
-    <TextView
-        android:id="@+id/fragment_second_mortes_totais"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="TotalCasesText"
-        app:layout_constraintEnd_toEndOf="@+id/fragment_second_casos_totais"
-        app:layout_constraintTop_toTopOf="@+id/fragment_second_mortes_totais_textView"/>
+        <TextView
+            android:id="@+id/fragment_second_novos_casos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/fragment_second_novos_casos_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="NewCasesText" />
 
-    <TextView
-        android:id="@+id/fragment_second_total_recuperados_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:text="Total de recuperados:"
-        android:layout_marginTop="8dp"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@id/fragment_second_mortes_totais_textView"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_second_mortes_totais_textView" />
-    <TextView
-        android:id="@+id/fragment_second_total_recuperados"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="TotalRecoveredText"
-        app:layout_constraintEnd_toEndOf="@+id/fragment_second_mortes_totais"
-        app:layout_constraintTop_toTopOf="@+id/fragment_second_total_recuperados_textView"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/fragment_second_novas_mortes_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:text="Novas mortes:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_second_novos_casos_textView" />
+
+        <TextView
+            android:id="@+id/fragment_second_novas_mortes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/fragment_second_novas_mortes_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="NewDeathsText" />
+
+        <TextView
+            android:id="@+id/fragment_second_casos_totais_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:text="Casos totais:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_second_novas_mortes_textView" />
+
+        <TextView
+            android:id="@+id/fragment_second_casos_totais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/fragment_second_casos_totais_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="TotalCasesText" />
+
+        <TextView
+            android:id="@+id/fragment_second_mortes_totais_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:text="Mortes totais:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_second_casos_totais_textView" />
+
+        <TextView
+            android:id="@+id/fragment_second_mortes_totais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/fragment_second_mortes_totais_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="TotalCasesText" />
+
+        <TextView
+            android:id="@+id/fragment_second_total_recuperados_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:text="Total de recuperados:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_second_mortes_totais_textView" />
+
+        <TextView
+            android:id="@+id/fragment_second_total_recuperados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:layout_marginRight="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/fragment_second_total_recuperados_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="TotalRecoveredText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

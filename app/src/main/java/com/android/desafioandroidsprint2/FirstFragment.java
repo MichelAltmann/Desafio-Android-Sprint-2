@@ -1,7 +1,6 @@
 package com.android.desafioandroidsprint2;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +20,6 @@ import java.util.List;
 
 public class FirstFragment extends Fragment {
 
-    public static final String TAG = "Get Covid Data List";
     private FragmentFirstBinding binding;
     private CovidListAdapter adapter;
 
@@ -49,18 +47,22 @@ public class FirstFragment extends Fragment {
     private void configuraAdapter(List<CountryCovidData> covidListData, RecyclerView covidList) {
         adapter = new CovidListAdapter(getContext(), covidListData);
         covidList.setAdapter(adapter);
+
         adapter.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(CountryCovidData data, int posicao) {
-                Fragment fragment = new SecondFragment();
-                Bundle bundle = new Bundle();
-                CountryCovidData countryCovidData = covidListData.get(posicao);
-                Log.i(TAG, countryCovidData.toString());
-                bundle.putSerializable("countryName", countryCovidData);
-                fragment.setArguments(bundle);
-                NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_SecondFragment,bundle);
+                criaBundleEChamaSecondFragment(posicao, covidListData);
             }
         });
+    }
+
+    private void criaBundleEChamaSecondFragment(int posicao, List<CountryCovidData> covidListData) {
+        Fragment fragment = new SecondFragment();
+        Bundle bundle = new Bundle();
+        CountryCovidData countryCovidData = covidListData.get(posicao);
+        bundle.putSerializable("countryData", countryCovidData);
+        fragment.setArguments(bundle);
+        NavHostFragment.findNavController(FirstFragment.this).navigate(R.id.action_FirstFragment_to_SecondFragment,bundle);
     }
 
     @Override
