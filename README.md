@@ -34,4 +34,9 @@ A Branch master é a Branch Main antes de ser renomeada, esta é como se fosse o
 8.	Quais são os comandos usados para atualizar um repositório local e fazer merge de um outro branch ao seu branch ativo?
 
 Git checkout nomedabranch
+
 Git merge nomedaoutrabranch
+
+9.	Qual a diferença entre git e github?
+
+A diferença é que git é o sistema de controle de versões que te deixa atualizar e manter controle delas, e o github é o host na nuvem onde você pode acessar e gerir essas versões.
